@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+.providers_ico_sprite {background-position:0 0;background-repeat:no-repeat;background-image:url(../img/providers_ico_sprite.png);display:inline-block;width:16px;height:16px;}
+.google_ico {background-position:0 0}
+.yandex_ico {background-position:0 -16px}
+.mailruapi_ico, .mailru_ico {background-position:0 -32px}
+
+.vkontakte_ico {background-position:0 -48px}
+.facebook_ico {background-position:0 -64px}
+.twitter_ico {background-position:0 -80px}
+
+.loginza_ico {background-position:0 -96px}
+.myopenid_ico {background-position:0 -112px}
+.webmoney_ico {background-position:0 -128px}
+
+.rambler_ico {background-position:0 -144px}
+.flickr_ico {background-position:0 -160px}
+.lastfm_ico {background-position:0 -176px}
+
+.openid_ico {background-position:0 -192px}
+.verisign_ico {background-position:0 -208px}
+.aol_ico {background-position:0 -224px}
+.steam_ico {background-position:0 -240px}

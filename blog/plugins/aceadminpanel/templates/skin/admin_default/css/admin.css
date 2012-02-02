@@ -1,0 +1,389 @@
+/*---------------------------------------------------------------------------
+ * @Plugin Name: aceAdminPanel
+ * @Plugin Id: aceadminpanel
+ * @Plugin URI: 
+ * @Description: Advanced Administrator's Panel for LiveStreet/ACE
+ * @Version: 1.5.271
+ * @Author: Vadim Shemarov (aka aVadim)
+ * @Author URI: 
+ * @LiveStreet Version: 0.5
+ * @File Name: admin.css
+ * @License: GNU GPL v2, http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *----------------------------------------------------------------------------
+ */
+h4 {font-size: 1.1em;}
+
+.clear {clear: both;}
+.clearline {clear: both; height: 0;}
+
+.-box:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html.-box {
+    height: 1%;
+}
+*:first-child+html.-box {
+    min-height: 1px;
+}
+hr.break {
+    border-width: 0; color: #fff;
+}
+#wrapper {
+    margin-top: 5px;
+    background: #FFF;
+    border:  1px solid #DDD;
+    border-left: 0;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    box-shadow: 0px 0px 5px #DDD;
+}
+
+table.admin-table {
+    border-collapse: collapse;
+    font-size: 1em;
+    border: 2px solid #777;
+    width: 99%;
+}
+
+table.admin-table th, table.admin-table td {
+    font-size: 0.9em;
+}
+
+table.admin-table th {
+    font-weight: bold;
+    background: #CCC;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #777;
+    padding: 4px;
+}
+table.admin-table th a {
+    color: #33F;
+}
+table.admin-table td {
+    font-weight: normal;
+    text-align: left;
+    vertical-align: top;
+    padding: 4px;
+    border: 1px solid #CCC;
+}
+table.admin-table tfoot {
+    margin-top: 1px;
+}
+table.admin-table tfoot tr td {
+    background: #EEE;
+    border: 1px solid #777;
+    border-top: 3px double #777;
+    height: 2px;
+}
+
+table.admin-table tr.colored {
+    background: #FFD;
+}
+
+table.admin-table tr.inactive {
+    background-color: #FFF7F7;
+}
+table.admin-table tr.active {
+    background-color: #F0FFF0;
+}
+table.admin-table tr:hover {
+    background: #FFB;
+}
+
+table.admin-table td.number, input.number {
+    text-align: right;
+    padding-right: 4px;
+}
+
+table.admin-table td.text {
+    text-align: left;
+}
+
+table.admin-table td.center {
+    text-align: center;
+}
+
+table.admin-table td.name .active, table.admin-table td.name .inactive {
+    float: left;
+    width: 14px;
+    height: 14px;
+}
+
+table.admin-table td.name .inactive {
+    background: url(../images/adm_icons.png) no-repeat 0px -32px;
+}
+table.admin-table td.name .active {
+    background: url(../images/adm_icons.png) no-repeat -28px -32px;
+}
+
+table.admin-table td.name .title {
+    font-size: 1.4em;
+    color: #0c3a6d;
+    font-weight: bold;
+    padding-left: 16px;
+}
+
+table.admin-table td.name .url {
+    border-top: 1px dotted #CCC;
+    color: #909090;
+}
+
+table.admin-table td.activate,
+table.admin-table td.deactivate {
+    padding: 4px;
+}
+table.admin-table td.activate a,
+table.admin-table td.deactivate a {
+    padding: 4px;
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+}
+table.admin-table td.activate a {
+    background: #6C6;
+    border: 1px outset #6C6;
+}
+table.admin-table td.activate a:hover {
+    background: #0C0;
+}
+table.admin-table td.deactivate a {
+    background: #F66;
+    border: 1px inset #F66;
+}
+table.admin-table td.deactivate a:hover {
+    background: #F00;
+}
+
+table.admin-table td.version {
+    text-align: center;
+}
+
+div.adm_noactive {background: url(../images/adm_icons.png) no-repeat 0px -16px; float: left; display: block; height: 16px; text-decoration: none; width: 14px;}
+div.adm_banned {background: url(../images/adm_icons.png) no-repeat -28px -16px; float: left; display: block; height: 16px; text-decoration: none; width: 14px;}
+div.adm_admin {background: url(../images/adm_icons.png) no-repeat -42px -16px; float: left; display: block; height: 16px; text-decoration: none; width: 14px;}
+div.adm_user {background: url(../images/adm_icons.png) no-repeat -14px -16px; float: left; display: block; height: 16px; text-decoration: none; width: 14px;}
+td.adm_field {border-bottom:1px dotted #CCC;}
+.adm_edit {border:1px solid #CCC;background:#EEE;margin:1px;}
+
+#sidebar-right {
+    margin-top: 44px;
+    font-size: 0.9em;
+}
+#sidebar-right h3 {
+    font-size: 1.4em;
+    position: relative;
+    left: -10px;
+}
+#sidebar-right h4 {
+    font-size: 1.2em;
+}
+.block-content {
+    padding: 0;
+}
+.block-content a {
+    text-decoration: none;
+}
+.block-content a:hover {
+    text-decoration: underline;
+}
+#admin-d1, #admin-d2, #admin-d3 {
+    display: block;
+    border: 1px dotted #777;
+    background: #EEE;
+    padding: 4px;
+}
+.block-content input, .block-content select {
+    font-size: 0.95em;
+}
+.block-content input[type="text"], .block-content textarea {
+    width: 134px;
+}
+.block-content #user_ip1_seek, .block-content #user_ip2_seek,
+.block-content #user_ip3_seek, .block-content #user_ip4_seek {
+    width:22px;
+    text-align:center;
+}
+.block-content input[type="submit"], .block-content input[type="reset"] {
+    font-weight: bold;
+}
+.block-content #talk_users_list {
+    font-weight: bold;
+}
+.block-content #send_common_message_yes_label1 {
+    display: block;
+    float: right;
+}
+.admin-radio {
+    display: block;
+    float: left;
+}
+
+.phpinfo .sechead {background: #CCC; padding: 4px 10px; margin: 4px 0;}
+.phpinfo .close {display: block; float: right; cursor: pointer;}
+.phpinfo .section {padding: 0px 0px 10px 20px;}
+.phpinfo table {border-collapse: collapse; width: 100%;}
+.phpinfo td, th { border: 1px solid #000000; font-size: 0.85em; vertical-align: baseline; padding: 2px;}
+.phpinfo .e {background-color: #ccccff; font-weight: bold; color: #000000; width:30%;}
+.phpinfo .h {background-color: #9999cc; font-weight: bold; color: #000000;}
+.phpinfo .v {background-color: #cccccc; color: #000000;}
+
+.adm-subtitle {
+    font-size:1.1em;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+.block-nav li {display: block; float: left;}
+.block-nav li a { padding: 3px 0 7px 0; margin: 0 8px; display: block; float: left; }
+
+#container {width: 98%; }
+/* #content { width: 66%; padding: 0px;} */
+/* #sidebar { width: 31%; float: left; margin-left: 1%; margin-top: -6px; } */
+/* #sidebar-right { width: 33%; } */
+
+.profile-user {padding: 0px;}
+.profile-user .status { 
+    float:right; padding:2px;
+    width:15px; height:16px;
+    border:1px solid #CCC; display: block;
+    text-align: center;
+    vertical-align: middle;
+}
+.profile-user .strength {
+    padding: 0;
+    margin-left: 8px;
+    text-align: center;
+}
+
+.profile-user .voting a.adm_plus  { background: url(../images/adm_icons.png) no-repeat scroll 0px 0px; float: left; display: block; height: 16px; text-decoration: none; width: 13px; margin:2px 2px 0px 0px;}
+.profile-user .voting a.adm_plus:hover { background: url(../images/adm_icons.png) no-repeat scroll -14px 0px;}
+.profile-user .voting a.adm_minus { background: url(../images/adm_icons.png) no-repeat scroll -28px 0px; float: left; display: block; height: 16px; text-decoration: none; width: 13px; margin: 9px 0px 0px 3px; }
+.profile-user .voting a.adm_minus:hover { background: url(../images/adm_icons.png) no-repeat scroll -42px 0px; }
+.profile-user .voting a.plus { margin-right: 2px;}
+.profile-user .voting .total { margin-right: 2px;}
+.profile-user .voting.voted a.plus { cursor: pointer; cursor: hand; margin-right: 2px;}
+.profile-user .voting.voted a.minus { cursor: pointer;  cursor: hand;}
+.profile-user .voting.voted.plus a.minus:hover { cursor: pointer;  cursor: hand;}
+.profile-user .voting.voted.minus a.plus:hover { cursor: pointer;  cursor: hand;}
+
+.profile-user .vote-stat {
+    display:block; font-size:0.9em;
+}
+
+.profile-user .vote-stat table th {
+    text-align:center; background:#CCC; font-weight:bold;
+    font-size: 1.2em;
+}
+
+.block {
+    background: #FFF;
+    color: #333;
+}
+.block a {
+    color: #70aae0;
+}
+.block h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.block h3 {
+    font-size: 1.0em;
+    padding: 0 5px;
+    margin-left: 20px;
+    border-top: 1px solid #999;
+}
+
+#pagination {
+    font-size: 0.8em;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    margin: 0px;
+}
+
+.bulk-users-list {
+    padding: 10px;
+    font-weight: bold;
+}
+.bulk-users-list li {
+    list-style-type: disc;
+    margin-left: 32px;
+}
+.msg-warning {
+    border:1px solid #C00;background:#FCC;color:#C00;padding:10px;
+}
+
+#adm_icon_menu {
+    position: absolute;
+    position: fixed;
+}
+
+div.adm_sort_none, div.adm_sort_asc, div.adm_sort_desc {
+    float: right;
+    display: block;
+    height: 16px;
+    width: 12px;
+    text-decoration: none;
+}
+div.adm_sort_none {
+    background: url(../images/adm_icons.png) no-repeat 0px -45px;
+}
+div.adm_sort_asc {
+    background: url(../images/adm_icons.png) no-repeat -14px -45px;
+}
+div.adm_sort_desc {
+    background: url(../images/adm_icons.png) no-repeat -28px -45px;
+}
+
+a.adm_plugin_up, a.adm_plugin_down {
+    display: block;
+    height: 16px;
+    width: 13px;
+    text-decoration: none;
+    margin: 2px 0px;
+}
+
+.adm_plugin_up  { background: url(../images/adm_icons.png) no-repeat scroll 0px 0px;}
+.adm_plugin_up:hover { background: url(../images/adm_icons.png) no-repeat scroll -14px 0px;}
+.adm_plugin_down { background: url(../images/adm_icons.png) no-repeat scroll -28px 0px; }
+.adm_plugin_down:hover { background: url(../images/adm_icons.png) no-repeat scroll -42px 0px; }
+
+div.adm_section_head {
+    background: #CCC;
+    display: block;
+    height: 24px;
+}
+div.adm_section_head h4 {
+    font-weight: bold;
+    padding-left: 8px;
+}
+div.adm_section_head input[type=submit] {
+    display: block;
+    float: right;
+}
+
+fieldset {
+    padding:  10px;
+    margin: 10px 0;
+    border: 1px solid #CCC;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+label.checked {
+    /* font-weight: bold; */
+}
+
+.adm_info_section {
+    width: 49%; float: left;margin: 2px;
+}
+.adm_info_value {
+    font-weight: bold;
+}

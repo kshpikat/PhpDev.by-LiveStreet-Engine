@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>
+		<lang name="default">Loginza</lang>
+	</name>
+	<author>
+		<lang name="default">Sergey Arsenichev</lang>
+	</author>
+	<homepage>http://loginza.ru</homepage>
+	<version>1.0.0</version>
+	<requires>
+		<livestreet>0.4.2</livestreet>
+		<plugins>
+
+		</plugins>
+	</requires>
+	<description>
+		<lang name="default">Loginza multiauthorization plugin</lang>
+		<lang name="russian">Плагин авторизации через сторонние аккаунты Loginza</lang>
+	</description>
+	<delegate>
+		<module></module>
+		<action></action>
+		<template></template>
+		<entity></entity>
+	</delegate>
+</plugin>
