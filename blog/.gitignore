@@ -1,0 +1,6 @@
+blog/logs/*.log
+blog/config/config.local.php
+blog/plugins/*/config/config.php
+blog/install/
+blog/tmp/
+blog/uploads/images/
