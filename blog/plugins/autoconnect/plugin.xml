@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>
+		<lang name="default">Blogs Autoconnect Plugin</lang>
+	</name>
+	<author>
+		<lang name="default">eXtravert</lang>
+	</author>
+	<homepage>http://lsmods.ru/</homepage>
+	<version>1.0.0</version>
+	<requires>
+		<livestreet>0.4.0</livestreet>
+		<plugins>
+		
+		</plugins>
+	</requires>
+	<description>
+		<lang name="default">Blogs Autoconnect Plugin</lang>
+		<lang name="russian">Плагин автоматического подключения блогов при создании топика.</lang>
+	</description>
+	<delegate>
+		<module></module>
+		<action></action>
+		<template></template>
+		<entity></entity>
+	</delegate>
+</plugin>
