@@ -8,6 +8,7 @@
 
     <div class="right"></div>
     <!--<a href="#" class="rss" onclick="return false;"></a>-->
+  {*
     <div class="search">
         <form action="{router page='search'}topics/" method="GET">
             <input class="text" type="text" onblur="if (!value) value=defaultValue"
@@ -15,5 +16,6 @@
             <input class="button" type="submit" value=""/>
         </form>
     </div>
+  *}
 </div>
 <!-- /Navigation -->
