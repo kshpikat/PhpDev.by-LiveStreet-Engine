@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>
+		<lang name="default">CKEditor</lang>
+	</name>
+	<author>
+		<lang name="default">Inkoder</lang>
+	</author>
+	<author>
+		<lang name="russian">Сергей Акулов AKA Inkoder</lang>
+	</author>
+	<homepage>http://ls.at-mex.ru/</homepage>
+	<settings></settings>
+	<version>0.1.2</version>
+	<requires>
+		<livestreet>0.4.2</livestreet>
+		<plugins>
+
+		</plugins>
+	</requires>
+	<description>
+		<lang name="default">CKeditor. Replace for internal editor instead of TinyMCE.</lang>
+		<lang name="russian">CKeditor. Замена встроенному редактору</lang>
+	</description>
+</plugin>
