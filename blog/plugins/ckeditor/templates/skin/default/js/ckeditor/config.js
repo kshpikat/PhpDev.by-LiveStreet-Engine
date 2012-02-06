@@ -9,17 +9,17 @@ CKEDITOR.editorConfig = function( config )
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 
-	config.extraPlugins = 'tagcut,lsupload';
+	config.extraPlugins = 'tagcut,lsupload,youtube';
 
 	config.language = 'ru';
- 
+
 	config.toolbar_NewFull =
 	[
 	{ name: 'document', items : [ 'Source','-','Save','NewPage','DocProps','Print','-','Templates' ] },
 	{ name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo', '-','Redo', 'TagCut' ] },
 	{ name: 'editing', items : [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ] },
 	'/',
-	{ name: 'insert', items : [ 'LsUpload', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe' ] },
+	{ name: 'insert', items : [ 'Youtube', 'LsUpload', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe' ] },
 	{ name: 'links', items : [ 'Link','Unlink','Anchor' ] },
 	{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
 	'/',
