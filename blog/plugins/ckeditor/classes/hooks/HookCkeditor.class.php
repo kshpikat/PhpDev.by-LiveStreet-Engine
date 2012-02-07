@@ -33,7 +33,19 @@ class PluginCkeditor_HookCkeditor extends Hook {
          */
        	$sAttachTo = 'form_add_topic_topic_end';
 				$this->AddHook('init_action', 'CkeditorHead', __CLASS__);
+				$tCfgArr = Config::Get('jevix.default.cfgAllowTags');
+
+				$tId1 = array_pop(array_keys($tCfgArr));
+				$tId2 = array_pop(array_keys($tCfgArr[$tId1]));
+
+				array_push($tCfgArr[$tId1][$tId2],"p");
+				Config::Set('jevix.default.cfgAllowTags',$tCfgArr);
+				$tCfgArr = Config::Get('jevix.default.cfgAllowTagParams');
+				$tCfgArr = array_merge($tCfgArr,array(0=>array("p",array("class"))));
+
+				Config::Set('jevix.default.cfgAllowTagParams',$tCfgArr);
     }
+
 
     /**
      * Подключаем CSS и JS
@@ -71,6 +83,9 @@ class PluginCkeditor_HookCkeditor extends Hook {
 
   	    $sScript = Plugin::GetTemplateWebPath(__CLASS__).'js/'.'ckeditor/ckeditor.js';
     	  $this->Viewer_AppendScript($sScript, array("merge"=>false));
+
+    	  $sStyle = Plugin::GetTemplateWebPath(__CLASS__).'css/ckclasses.css';
+    	  $this->Viewer_AppendStyle($sStyle);
 
 	      $sScript = Plugin::GetTemplateWebPath(__CLASS__).'js/'.'ckeditor/config.js';
   	    $this->Viewer_AppendScript($sScript, array("merge"=>false));
