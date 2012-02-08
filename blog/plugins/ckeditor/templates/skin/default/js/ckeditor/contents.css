@@ -23,3 +23,9 @@ ol,ul,dl
 	/* preserved spaces for rtl list item bullets. (#6249)*/
     padding-right:40px;
 }
+
+
+.AlignLeft { text-align:left; }
+.AlignRight { text-align:right; }
+.AlignJustify { text-align:justify; }
+.AlignCenter { text-align:center; }

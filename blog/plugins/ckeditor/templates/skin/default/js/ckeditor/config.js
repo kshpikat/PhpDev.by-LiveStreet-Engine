@@ -9,17 +9,17 @@ CKEDITOR.editorConfig = function( config )
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 
-	config.extraPlugins = 'tagcut,lsupload';
+	config.extraPlugins = 'tagcut,lsupload,youtube';
 
 	config.language = 'ru';
- 
+
 	config.toolbar_NewFull =
 	[
 	{ name: 'document', items : [ 'Source','-','Save','NewPage','DocProps','Print','-','Templates' ] },
 	{ name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo', '-','Redo', 'TagCut' ] },
 	{ name: 'editing', items : [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ] },
 	'/',
-	{ name: 'insert', items : [ 'LsUpload', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe' ] },
+	{ name: 'insert', items : [ 'LsUpload', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe','Youtube' ] },
 	{ name: 'links', items : [ 'Link','Unlink','Anchor' ] },
 	{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
 	'/',
@@ -28,6 +28,10 @@ CKEDITOR.editorConfig = function( config )
 	];
 
 	config.toolbar = 'NewFull';
+
+	config.justifyClasses = [ 'AlignLeft', 'AlignCenter', 'AlignRight', 'AlignJustify' ];
+
+
 //	config.filebrowserUploadUrl = '/plugins/ckeditor/ckupload.php';
 //	{ name: 'forms', items : [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button','ImageButton', 'HiddenField' ] },
 //	{ name: 'styles', items : [ 'Styles','Format','Font','FontSize' ] },
