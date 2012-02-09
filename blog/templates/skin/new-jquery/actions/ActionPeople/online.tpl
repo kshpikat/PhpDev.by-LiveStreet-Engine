@@ -18,7 +18,7 @@
 		{foreach from=$aUsersLast item=oUser}
 			{assign var="oSession" value=$oUser->getSession()}
 			<tr>
-				<td><a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(50)}" width="50" height="50" alt="{$oUser->getLogin()}" class="avatar" /></a><a href="{$oUser->getUserWebPath()}" class="username">{$oUser->getLogin()}</a></td>														
+				<td><a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" width="48" height="48" alt="{$oUser->getLogin()}" class="avatar" /></a><a href="{$oUser->getUserWebPath()}" class="username">{$oUser->getLogin()}</a></td>														
 				<td align="center" class="date">{date_format date=$oSession->getDateLast()}</td>
 				<td align="center" class="strength">{$oUser->getSkill()}</td>							
 				<td align="center" class="rating"><strong>{$oUser->getRating()}</strong></td>
