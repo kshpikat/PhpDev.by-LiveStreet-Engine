@@ -131,7 +131,7 @@ return array(
 		// Отключение авто-добавления <br>
 		'cfgSetAutoBrMode' => array(
 			array(
-				true
+				false
 			)
 		),
 		// Автозамена
