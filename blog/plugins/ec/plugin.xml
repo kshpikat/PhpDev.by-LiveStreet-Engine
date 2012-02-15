@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <name>
+	<lang name="default">EC</lang>
+    </name>
+    <author>
+	<lang name="default">netlanc</lang>
+    </author>
+    <homepage>http://netlanc.net</homepage>
+    <version>0.2</version>
+    <requires>
+	<livestreet>0.5x</livestreet>
+    </requires>
+    <description>
+	<lang name="default">Edit Comment</lang>
+	<lang name="russian">Редактирование коментариев</lang>
+    </description>
+</plugin>

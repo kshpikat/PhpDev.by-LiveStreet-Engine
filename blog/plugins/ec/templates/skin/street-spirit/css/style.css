@@ -1,0 +1,15 @@
+.info li.edit a{
+    color: green;
+}
+.info li.save, .info li.cancel{
+    display: none;
+}
+.info li.save a{
+    color: blue; 
+}
+.info li.cancel a{
+    color: red;
+}
+.info_edit{
+    font-size: 9px; font-style: italic; text-align: right; margin-top: -10px; color: #aaa;
+}
