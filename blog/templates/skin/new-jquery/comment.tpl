@@ -10,6 +10,29 @@
 	
 	
 	<div id="comment_content_id_{$oComment->getId()}" class="content">
+        <ul class="info">
+            <li class="avatar"><a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" style="width:24px;height:24px" /></a></li>
+            <li class="username"><a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a></li>
+            <li class="date">{date_format date=$oComment->getDate()}</li>
+            {if $oUserCurrent and !$oComment->getDelete() and !$bAllowNewComment}
+                <li><a href="#" onclick="ls.comments.toggleCommentForm({$oComment->getId()}); return false;" class="reply-link">{$aLang.comment_answer}</a></li>
+            {/if}
+            <li><a href="{if $oConfig->GetValue('module.comment.nested_per_page')}{router page='comments'}{else}#comment{/if}{$oComment->getId()}" class="comment-link"></a></li>	
+            {if $oComment->getPid()}
+                <li class="goto-comment-parent"><a href="#" onclick="ls.comments.goToParentComment({$oComment->getId()},{$oComment->getPid()}); return false;" title="{$aLang.comment_goto_parent}">↑</a></li>
+            {/if}
+            <li class="goto-comment-child"><a href="#" title="{$aLang.comment_goto_child}">↓</a></li>
+            {if $oUserCurrent and !$bNoCommentFavourites}
+                <li><a href="#" onclick="return ls.favourite.toggle({$oComment->getId()},this,'comment');" class="favourite {if $oComment->getIsFavourite()}active{/if}"></a></li>
+            {/if}
+            {if !$oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}
+                <li><a href="#" class="delete" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_delete}</a></li>
+            {/if}
+            {if $oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}   										
+                <li><a href="#" class="repair" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_repair}</a></li>
+            {/if}
+            {hook run='comment_action' comment=$oComment}
+        </ul>
 		{if $oComment->isBad()}
 			<div style="display: none;" id="comment_text_{$oComment->getId()}">
 				{$oComment->getText()}
@@ -30,29 +53,7 @@
 	{/if}
 	
 	
-	<ul class="info">
-		<li class="avatar"><a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" /></a></li>
-		<li class="username"><a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a></li>
-		<li class="date">{date_format date=$oComment->getDate()}</li>
-		{if $oUserCurrent and !$oComment->getDelete() and !$bAllowNewComment}
-			<li><a href="#" onclick="ls.comments.toggleCommentForm({$oComment->getId()}); return false;" class="reply-link">{$aLang.comment_answer}</a></li>
-		{/if}
-		<li><a href="{if $oConfig->GetValue('module.comment.nested_per_page')}{router page='comments'}{else}#comment{/if}{$oComment->getId()}" class="comment-link"></a></li>	
-		{if $oComment->getPid()}
-			<li class="goto-comment-parent"><a href="#" onclick="ls.comments.goToParentComment({$oComment->getId()},{$oComment->getPid()}); return false;" title="{$aLang.comment_goto_parent}">↑</a></li>
-		{/if}
-		<li class="goto-comment-child"><a href="#" title="{$aLang.comment_goto_child}">↓</a></li>
-		{if $oUserCurrent and !$bNoCommentFavourites}
-			<li><a href="#" onclick="return ls.favourite.toggle({$oComment->getId()},this,'comment');" class="favourite {if $oComment->getIsFavourite()}active{/if}"></a></li>
-		{/if}
-		{if !$oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}
-			<li><a href="#" class="delete" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_delete}</a></li>
-		{/if}
-		{if $oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}   										
-			<li><a href="#" class="repair" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_repair}</a></li>
-		{/if}
-		{hook run='comment_action' comment=$oComment}
-	</ul>
+
 {else}				
 	{$aLang.comment_was_delete}
 {/if}
